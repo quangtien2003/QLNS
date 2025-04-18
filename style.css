@@ -1,0 +1,220 @@
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+}
+
+h1{
+    display: block;
+  font-size: 1.8em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+h2{
+    display: block;
+  font-size: 1.5em;
+  margin-top: 0.83em;
+  margin-bottom: 0.83em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 280px;
+    background: #fff;
+    color: white;
+    padding: 20px;
+    min-height: 95.5vh;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.logo img {
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 25px 0;
+    padding-left: 8px;
+    border-left: 1px solid #a7a7a7;
+}
+
+
+nav ul li a{
+    text-decoration: none;
+}
+
+nav ul li label {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+}
+
+nav ul li label:hover{
+    color: rgb(255, 93, 93);
+}
+
+nav ul li label a {
+        color: #fff;
+        text-decoration: none;
+}
+
+
+nav ul li label i {
+    margin-right: 10px;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    display: block;
+}
+
+
+.main-content {
+    background: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    padding: 20px;
+    display: block;
+}
+
+.sub-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.title{
+    font-weight: 600;
+    border-bottom: 1px solid #ccc;
+    padding: 4px;
+}
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.profile img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.section {
+    background: #eceded;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px;
+    width: calc(50% - 50px);
+}
+
+.section:last-child {
+    align-items: center;
+}
+.section h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.info {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+.info span {
+    font-weight: bold;
+}
+
+/* Bảng */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+td a{
+    color: rgb(247, 73, 73);
+}
+
+td a:hover{
+    color: rgb(220, 2, 2);
+}
+
+th {
+    background: #9de9f7;
+    font-weight: 600;
+}
+
+/* Nút */
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
