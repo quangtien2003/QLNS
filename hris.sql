@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th4 18, 2025 lúc 03:57 AM
+-- Thời gian đã tạo: Th4 19, 2025 lúc 04:03 AM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.0.30
 
@@ -1128,7 +1128,7 @@ CREATE TABLE `hs_nhan_vien` (
 --
 
 INSERT INTO `hs_nhan_vien` (`ma_nv`, `ho_ten`, `gioi_tinh`, `ngay_sinh`, `cccd`, `sdt`, `email`, `dia_chi`, `phong_ban`, `chuc_vu`, `ngay_vao_lam`) VALUES
-('NV001', 'Nguyễn Văn Nam', 'Nam', '2000-04-20', '079123456789', '0987654321', 'namnv@email.com', 'Hà Nội', 'Phòng IDC MB', 'Nhân viên', '2024-06-05'),
+('NV001', 'Nguyễn Văn Nam', 'Nam', '2000-04-20', '079123456789', '0987654321', 'namnv@email.com', 'Hà Nội', 'Phòng IDC MB', 'Nhân viên', '2024-06-06'),
 ('NV002', 'Trần Thị Bình', 'Nữ', '1992-09-21', '001234567891', '0987654321', 'tranthibinh@email.com', '456 Trường Chinh, Hà Nội', 'Phòng tổng hợp', 'Nhân viên', '2022-06-01'),
 ('NV003', 'Lê Văn Cường', 'Nam', '1988-11-15', '001234567892', '0933445566', 'levancuong@email.com', '789 Lê Lợi, Hà Nội', 'Phòng quản lý chất lượng', 'Trưởng phòng', '2020-03-15'),
 ('NV004', 'Phạm Thị Dung', 'Nữ', '1995-04-18', '001234567893', '0908123456', 'phamthidung@email.com', '12 Lý Thường Kiệt, Hà Nội', 'Phòng tổng hợp', 'Nhân viên', '2023-02-20'),
@@ -1264,6 +1264,7 @@ INSERT INTO `tin_tuyen_dung` (`id`, `tieu_de`, `mo_ta`, `yeu_cau`, `muc_luong`) 
 --
 
 CREATE TABLE `tt_luong` (
+  `id` int(11) NOT NULL,
   `ma_nv` varchar(20) NOT NULL,
   `luong_cb` decimal(15,2) DEFAULT NULL,
   `phu_cap` decimal(15,2) DEFAULT NULL,
@@ -1274,27 +1275,27 @@ CREATE TABLE `tt_luong` (
 -- Đang đổ dữ liệu cho bảng `tt_luong`
 --
 
-INSERT INTO `tt_luong` (`ma_nv`, `luong_cb`, `phu_cap`, `khau_tru`) VALUES
-('NV001', 15000000.00, 2000000.00, 1200000.00),
-('NV002', 12000000.00, 1500000.00, 1000000.00),
-('NV003', 11000000.00, 1300000.00, 900000.00),
-('NV004', 10000000.00, 1200000.00, 800000.00),
-('NV005', 9000000.00, 1000000.00, 700000.00),
-('NV006', 14500000.00, 1900000.00, 1150000.00),
-('NV007', 12500000.00, 1600000.00, 1050000.00),
-('NV008', 11500000.00, 1400000.00, 950000.00),
-('NV009', 10500000.00, 1100000.00, 850000.00),
-('NV010', 8500000.00, 900000.00, 600000.00),
-('NV011', 14000000.00, 1850000.00, 1100000.00),
-('NV012', 13000000.00, 1700000.00, 1020000.00),
-('NV013', 12000000.00, 1500000.00, 950000.00),
-('NV014', 10000000.00, 1300000.00, 850000.00),
-('NV015', 8500000.00, 1100000.00, 700000.00),
-('NV016', 13800000.00, 1800000.00, 1080000.00),
-('NV017', 12800000.00, 1600000.00, 980000.00),
-('NV018', 11800000.00, 1400000.00, 900000.00),
-('NV019', 10800000.00, 1200000.00, 850000.00),
-('NV020', 9800000.00, 1000000.00, 600000.00);
+INSERT INTO `tt_luong` (`id`, `ma_nv`, `luong_cb`, `phu_cap`, `khau_tru`) VALUES
+(1, 'NV001', 15000000.00, 2000000.00, 1200000.00),
+(2, 'NV002', 12000000.00, 1500000.00, 1000000.00),
+(3, 'NV003', 11000000.00, 1300000.00, 900000.00),
+(4, 'NV004', 10000000.00, 1200000.00, 800000.00),
+(5, 'NV005', 9000000.00, 1000000.00, 700000.00),
+(6, 'NV006', 14500000.00, 1900000.00, 1150000.00),
+(7, 'NV007', 12500000.00, 1600000.00, 1050000.00),
+(8, 'NV008', 11500000.00, 1400000.00, 950000.00),
+(9, 'NV009', 10500000.00, 1100000.00, 850000.00),
+(10, 'NV010', 8500000.00, 900000.00, 600000.00),
+(11, 'NV011', 14000000.00, 1850000.00, 1100000.00),
+(12, 'NV012', 13000000.00, 1700000.00, 1020000.00),
+(13, 'NV013', 12000000.00, 1500000.00, 950000.00),
+(14, 'NV014', 10000000.00, 1300000.00, 850000.00),
+(15, 'NV015', 8500000.00, 1100000.00, 700000.00),
+(16, 'NV016', 13800000.00, 1800000.00, 1080000.00),
+(17, 'NV017', 12800000.00, 1600000.00, 980000.00),
+(18, 'NV018', 11800000.00, 1400000.00, 900000.00),
+(19, 'NV019', 10800000.00, 1200000.00, 850000.00),
+(20, 'NV020', 9800000.00, 1000000.00, 600000.00);
 
 -- --------------------------------------------------------
 
@@ -1307,7 +1308,7 @@ CREATE TABLE `ung_vien` (
   `ho_ten` varchar(100) DEFAULT NULL,
   `sdt` varchar(20) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
-  `vi_tri_ung_tuyen` varchar(100) DEFAULT NULL,
+  `vi_tri_ung_tuyen` varchar(255) DEFAULT NULL,
   `trang_thai` enum('Đang xét duyệt','Mời phỏng vấn','Trúng tuyển','Không trúng tuyển') DEFAULT 'Đang xét duyệt'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -1323,7 +1324,7 @@ INSERT INTO `ung_vien` (`id`, `ho_ten`, `sdt`, `email`, `vi_tri_ung_tuyen`, `tra
 (5, 'Hồ Thị Kim Ngân', '0956789012', 'kim.ngan@email.com', 'ReactJS Developer', 'Mời phỏng vấn'),
 (6, 'Đoàn Văn Lộc', '0967890123', 'van.loc@email.com', 'Manual Tester', 'Trúng tuyển'),
 (7, 'Châu Thị Kiều', '0978901234', 'chau.kieu@email.com', 'Tester Jobs Definition', 'Trúng tuyển'),
-(8, 'Trịnh Thanh Phong', '0989012345', 'thanh.phong@email.com', 'ReactJS Developer', 'Đang xét duyệt'),
+(8, 'Trịnh Thanh Phong', '0989012345', 'thanh.phong@email.com', 'Manual Tester', 'Đang xét duyệt'),
 (9, 'Phạm Gia Hưng', '0990123456', 'gia.hung@email.com', 'Test Game', 'Không trúng tuyển'),
 (10, 'Mai Thị Hồng', '0901234567', 'mai.hong@email.com', 'Manual Tester', 'Mời phỏng vấn'),
 (11, 'Nguyễn Hải Yến', '0912345689', 'hai.yen@email.com', 'PHP Developer', 'Không trúng tuyển'),
@@ -1367,19 +1368,22 @@ ALTER TABLE `tai_khoan`
 -- Chỉ mục cho bảng `tin_tuyen_dung`
 --
 ALTER TABLE `tin_tuyen_dung`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `tieu_de` (`tieu_de`);
 
 --
 -- Chỉ mục cho bảng `tt_luong`
 --
 ALTER TABLE `tt_luong`
-  ADD PRIMARY KEY (`ma_nv`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_ttluong_nv` (`ma_nv`);
 
 --
 -- Chỉ mục cho bảng `ung_vien`
 --
 ALTER TABLE `ung_vien`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_vi_tri` (`vi_tri_ung_tuyen`);
 
 --
 -- AUTO_INCREMENT cho các bảng đã đổ
@@ -1389,7 +1393,7 @@ ALTER TABLE `ung_vien`
 -- AUTO_INCREMENT cho bảng `cham_cong`
 --
 ALTER TABLE `cham_cong`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1063;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1064;
 
 --
 -- AUTO_INCREMENT cho bảng `luong`
@@ -1408,6 +1412,12 @@ ALTER TABLE `tai_khoan`
 --
 ALTER TABLE `tin_tuyen_dung`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT cho bảng `tt_luong`
+--
+ALTER TABLE `tt_luong`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT cho bảng `ung_vien`
@@ -1435,7 +1445,13 @@ ALTER TABLE `luong`
 -- Các ràng buộc cho bảng `tt_luong`
 --
 ALTER TABLE `tt_luong`
-  ADD CONSTRAINT `tt_luong_ibfk_1` FOREIGN KEY (`ma_nv`) REFERENCES `hs_nhan_vien` (`ma_nv`);
+  ADD CONSTRAINT `fk_ttluong_nv` FOREIGN KEY (`ma_nv`) REFERENCES `hs_nhan_vien` (`ma_nv`);
+
+--
+-- Các ràng buộc cho bảng `ung_vien`
+--
+ALTER TABLE `ung_vien`
+  ADD CONSTRAINT `fk_vi_tri` FOREIGN KEY (`vi_tri_ung_tuyen`) REFERENCES `tin_tuyen_dung` (`tieu_de`) ON DELETE SET NULL ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

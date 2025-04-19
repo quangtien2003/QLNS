@@ -103,6 +103,10 @@ if (isset($_GET['id'])) {
                         <td><strong>Chức vụ:</strong></td>
                         <td><?= htmlspecialchars($nhan_vien['chuc_vu']) ?></td>
                     </tr>
+                    <tr>
+                        <td><strong>Ngày vào làm:</strong></td>
+                        <td><?= htmlspecialchars($nhan_vien['ngay_vao_lam']) ?></td>
+                    </tr>
                 </table>
             </div>
         </section>

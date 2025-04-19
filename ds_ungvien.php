@@ -62,6 +62,7 @@ if (isset($_GET['id']) && isset($_GET['trang_thai'])) {
                         <th>Email</th>
                         <th>Vị trí ứng tuyển</th>
                         <th>Trạng thái</th>
+                        <th>Cập nhật trạng thái</th>
                         <th>Hành động</th>
                     </tr>
                 </thead>
@@ -109,6 +110,12 @@ if (isset($_GET['id']) && isset($_GET['trang_thai'])) {
                                         echo "<i>Trạng thái không xác định</i>";
                                         break;
                                 }
+                                echo "</td>";
+                                echo "<td>";
+                                echo "
+                                        <a href='sua_ung_vien.php?id=" . $row['id'] . "'>
+                                            <button class='btn' style='margin-left: 8px;'>Sửa</button>
+                                        </a>";
                                 echo "</td>";
                         }
                     } else {

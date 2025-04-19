@@ -61,7 +61,10 @@ $result_td = $conn->query($sql_td);
             echo "<td>" . nl2br($row['mo_ta']) . "</td>";
             echo "<td>" . nl2br($row['yeu_cau']) . "</td>";
             echo "<td>" . nl2br($row['muc_luong']) . "</td>";
-            echo "<td><a href='xuat_file_td.php?id=" . $row['id'] . "'><button class='btn'>Xuất file</button></a></td>";
+            echo "<td>
+                    <a href='sua_td.php?id=" . $row['id'] . "'><button class='btn' style='margin-bottom: 4px;'>Sửa</button></a><br>
+                    <a href='xuat_file_td.php?id=" . $row['id'] . "'><button class='btn'>Xuất file</button></a>
+                  </td>";
             echo "</tr>";
         }
     } else {
