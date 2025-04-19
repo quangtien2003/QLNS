@@ -1,9 +1,27 @@
 <?php
 include 'connect.php';
 
-    $sql = "SELECT * FROM hs_nhan_vien";
+$search = isset($_GET['search']) ? trim($_GET['search']) : '';
+
+// Tạo câu truy vấn dựa trên có hay không có tìm kiếm
+if ($search != '') {
+    // Nếu có tìm kiếm, lọc theo từ khóa
+    $sql = "SELECT * 
+            FROM hs_nhan_vien
+            WHERE ho_ten LIKE ? OR ma_nv LIKE ?";
+    
+    $stmt = $conn->prepare($sql);
+    $searchParam = "%$search%";
+    $stmt->bind_param("ss", $searchParam, $searchParam);
+    $stmt->execute();
+    $result = $stmt->get_result();
+} else {
+    // Nếu không có tìm kiếm, lấy toàn bộ nhân viên
+    $sql = "SELECT * 
+            FROM hs_nhan_vien";
     
     $result = $conn->query($sql);
+}
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +60,10 @@ include 'connect.php';
             <h1>Quản lý hồ sơ nhân viên</h1>
             <a href="them_hsnv.php"><button class="btn" style="font-weight: 600; font-size: 14px;">Thêm hồ sơ nhân viên</button></a>
             <h2>Danh sách nhân viên</h2>
-
+            <form style="margin-top: 30px;" method="GET" action="">
+                <input style="height: 24px; width: 300px; padding: 4px" type="text" name="search" placeholder="Nhập thông tin tìm kiếm">
+                <button style="height: 34px; margin-left: 20px;">Tìm kiếm</button>
+            </form><br>
             <table>
                 <thead>
                     <tr>
